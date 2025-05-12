@@ -266,6 +266,14 @@
     margin-top: 10px;
 }
 
+.rotate-on-hover {
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.rotate-on-hover:hover {
+  transform: rotate(10deg);
+}
+
 
 .scroll-container {
   width: 100%;
