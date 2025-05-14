@@ -1,0 +1,55 @@
+function shuffleGallery() {
+Defines a new function named shuffleGallery that will handle the shuffling logic.
+
+
+const row = document.querySelector('.gallery-wrapper .row');
+Selects the <div class="row"> inside the .gallery-wrapper section.
+
+This is the parent container that holds all the .col-lg-4 elements (your images).
+
+
+
+const columns = Array.from(row.children);
+Gets all child elements of the row div (each .col-lg-4).
+
+row.children returns an HTMLCollection, so we use Array.from() to convert it into a real JavaScript array.
+
+This is necessary so we can shuffle it using array methods.
+
+
+
+const shuffled = columns.sort(() => Math.random() - 0.5);
+Randomly sorts the array using the sort() method.
+
+Math.random() - 0.5 produces a number between -0.5 and +0.5, which randomly places each element in the array.
+
+This line effectively shuffles the order of image containers.
+
+
+
+row.innerHTML = '';
+Clears the original contents of the row div.
+
+This removes all the current image columns from the DOM.
+
+
+
+shuffled.forEach(col => row.appendChild(col));
+Iterates over the shuffled array.
+
+Re-inserts each .col-lg-4 image container back into the row in the new (shuffled) order.
+
+
+
+setInterval(shuffleGallery, 5000);
+Automatically calls shuffleGallery() every 5000 milliseconds (i.e. every 5 seconds).
+
+This ensures that the gallery reshuffles continuously.
+
+
+
+window.onload = shuffleGallery;
+Calls the shuffleGallery() function once when the page first loads.
+
+This gives an initial shuffle before the interval starts.
+
