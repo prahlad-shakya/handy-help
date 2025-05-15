@@ -23,7 +23,7 @@
     display: flex;
     width: 100%;
     align-items: center;
-    gap: 420px;
+    gap: 220px;
     width: 100%;
     padding: 10px;
 }
@@ -39,6 +39,14 @@
 .nav-container input{
     display: none;
 }
+.active a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.dropdown .active {
+    font-size: 2rem;
+    font-weight: bold;
+}
 .nav-ul{
     display: flex;
     list-style: none;
@@ -47,6 +55,9 @@
 }
 .nav-ul li{
     cursor: pointer;
+}
+.nav-ul li:hover{
+    background: var(--accent-color);
 }
 .nav-ul a{
     text-decoration: none;
@@ -61,7 +72,10 @@
 }
 .drop-lists{
     background: var(--primary-color) !important;
-    color: var(--secondary-color);
+    /* color: var(--accent-color); */
+}
+.dropdown-item:hover{
+    color:var(--primary-color)!important;
 }
 .need-help {
   position: fixed;
@@ -228,6 +242,9 @@
     width: 420px;
     height: 370px;
 }
+.service-images img:hover{
+    scale: 2;
+}
 .service-headings p{
     font-weight: bold;
 }
@@ -373,11 +390,17 @@
     justify-content: space-between;
     margin-top: 50px;
 }
-.footer-cards{
-    margin-top: -90px;
+.footer-images img{
+    width: 50px;
 }
 .footer hr{
     margin-top: 20px;
+}
+.footer-mid a{
+    color: var(--primary-color) !important;
+}
+.footer-mid a:hover{
+    color: var(--secondary-color) !important;
 }
 
 .rotate-45 {
@@ -688,17 +711,23 @@ textarea::placeholder{
     color: var(--secondary-color);
     text-align: center;
 }
+.videos video:hover{
+    width: 100%;
+}
 
 
 @media (max-width: 1200px){
     .nav-ul{
-        gap: 20px;
+        gap: 15px;
     }
     .nav-container{
         gap: 180px;
     }
     .hero-bg-images img{
         height: 100vh;
+    }
+    .breadcrumb-gif-a img{
+        width: 500px;
     }
     .carousel-text{
         top: 80%;
@@ -1053,8 +1082,9 @@ textarea::placeholder{
         padding-top: 0;
     }
     .dark{
-        width: 400px !important;
-        margin-left: 10px;
+        width: 360px !important;
+        display: block;
+        margin: 0 auto;
     }
     .breadcrumb-gif-a{
         position: relative;
