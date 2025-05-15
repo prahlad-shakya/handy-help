@@ -997,6 +997,9 @@ textarea::placeholder{
     .carousel-text h1{
         font-size: 2rem;
     }
+    .need-help{
+        bottom: 7%;
+    }
     .about-bottom-right{
         display: grid;
         grid-template-columns: 1fr;
