@@ -839,6 +839,11 @@ textarea::placeholder {
   background: var(--third-color);
 }
 
+@media (max-width: 1300px){
+  .gallery-images img{
+    width: 380px;
+  }
+}
 @media (max-width: 1200px) {
   .nav-ul {
     gap: 15px;
