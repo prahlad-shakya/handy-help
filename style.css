@@ -89,7 +89,7 @@ p{
 }
 .need-help-btn {
   background: var(--primary-color);
-  color: white;
+  color: var(--secondary-color);
   padding: 15px 25px;
   border: 1px solid var(--secondary-color);
   font-size: 38px;
